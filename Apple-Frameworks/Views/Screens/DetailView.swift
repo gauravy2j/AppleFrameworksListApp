@@ -15,9 +15,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack{
-            
-            DismissButtonView(isShowingDetailView: $isShowingDetailView)
-            
+                        
             Spacer()
         
             FrameworkTitleView(framework: framework)
@@ -31,8 +29,18 @@ struct DetailView: View {
             Button(action: {
                 isShowingSafariView = true
             }, label: {
-                AppButton(title: "Learn More")
-                     .padding(.bottom)
+//                AppButton(title: "Learn More")
+//                     .padding(.bottom)
+                
+                Button {
+                    
+                } label: {
+                    Label("Learn More", systemImage: "book.fill")
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.large)
+                .tint(.red)
+
             })
           
         }
